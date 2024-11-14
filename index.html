@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ChronoShift - Visual Timezone Converter</title>
+        <link rel="icon" href="icon.svg" />
+        <link rel="stylesheet" href="styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>ChronoShift</h1>
+            </header>
+            
+            <main>
+                <section class="clock-section">
+                    <div class="digital-clock">
+                        <span id="digital-display">12:00:00</span>
+                    </div>
+                </section>
+
+                <section class="time-control-section">
+                    <div class="time-toggle">
+                        <button id="use-current-time" class="time-btn active">
+                            <span class="icon">⏰</span>
+                            Current Time
+                        </button>
+                        <button id="use-custom-time" class="time-btn">
+                            <span class="icon">📝</span>
+                            Custom Time
+                        </button>
+                    </div>
+                    <div id="custom-time-input" class="custom-time-input hidden">
+                        <input type="time" id="custom-time" aria-label="Select custom time" />
+                    </div>
+                </section>
+
+                <section class="timezone-section">
+                    <div class="timezone-grid">
+                        <div class="timezone-from">
+                            <h2>From</h2>
+                            <select id="timezone-from" class="timezone-select" aria-label="Select source timezone"></select>
+                        </div>
+
+                        <button id="swap-timezones" class="swap-btn" aria-label="Swap timezones">
+                            <span class="icon">⇄</span>
+                        </button>
+
+                        <div class="timezone-to">
+                            <h2>To</h2>
+                            <select id="timezone-to" class="timezone-select" aria-label="Select target timezone"></select>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="result-section">
+                    <div id="result" class="result"></div>
+                </section>
+            </main> 
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
