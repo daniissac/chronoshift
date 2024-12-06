@@ -21,7 +21,7 @@ TeamTime is a user-friendly web application designed to help teams track and man
 
 ## Live Demo
 
-Try TeamTime now at: [ChronoShift Demo](https://daniissac.com/chronoshift)
+Try TeamTime now at: [Demo](https://daniissac.com/teamtime)
 
 ## Contributing
 
