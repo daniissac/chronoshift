@@ -1,161 +1,202 @@
-let clockElements = {
-    display: document.getElementById('digital-display')
-};
+// Store colleagues in localStorage
+let colleagues = JSON.parse(localStorage.getItem('colleagues') || '[]');
+let dstRules = null;
 
-let timeControls = {
-    currentTimeBtn: document.getElementById('use-current-time'),
-    customTimeBtn: document.getElementById('use-custom-time')
-};
-
-let timezoneControls = {
-    fromSelect: document.getElementById('timezone-from'),
-    toSelect: document.getElementById('timezone-to'),
-    swapBtn: document.getElementById('swap-timezones'),
-    result: document.getElementById('result')
-};
-
-let clockInterval = null;
-
-// Load and populate timezone dropdowns
-async function loadTimezones() {
+// Load DST rules
+async function loadDSTRules() {
     try {
-        const response = await fetch('timezones.json');
-        const timezones = await response.json();
-        populateTimezoneDropdowns(timezones);
-        updateConversion();
+        const response = await fetch('dst_rules.json');
+        dstRules = await response.json();
     } catch (error) {
-        console.error('Error loading timezones:', error);
+        console.error('Error loading DST rules:', error);
     }
 }
 
-function populateTimezoneDropdowns(timezones) {
-    // Clear existing options first
-    timezoneControls.fromSelect.innerHTML = '';
-    timezoneControls.toSelect.innerHTML = '';
+// Check if DST is active for a timezone
+function isDSTActive(timezone) {
+    if (!dstRules) return false;
     
-    timezones.forEach(timezone => {
-        const fromOption = new Option(timezone.text, timezone.abbr);
-        const toOption = new Option(timezone.text, timezone.abbr);
-        timezoneControls.fromSelect.add(fromOption);
-        timezoneControls.toSelect.add(toOption);
-    });
-}
-
-async function updateConversion() {
-    try {
-        const response = await fetch('timezones.json');
-        const timezones = await response.json();
-        
-        const fromTimezone = timezones.find(tz => tz.abbr === timezoneControls.fromSelect.value);
-        const toTimezone = timezones.find(tz => tz.abbr === timezoneControls.toSelect.value);
-        
-        if (!fromTimezone || !toTimezone) return;
-
-        const currentTime = clockElements.display.contentEditable === 'true' 
-            ? parseCustomTime(clockElements.display.textContent)
-            : new Date();
-
-        const utc = currentTime.getTime() + (currentTime.getTimezoneOffset() * 60000);
-        const convertedTime = new Date(utc + (3600000 * toTimezone.offset));
-        
-        timezoneControls.result.innerHTML = `
-            <div class="converted-time">
-                <h3>${timezoneControls.toSelect.options[timezoneControls.toSelect.selectedIndex].text}</h3>
-                <div class="time">${convertedTime.toLocaleTimeString()}</div>
-            </div>
-        `;
-    } catch (error) {
-        console.error('Error updating conversion:', error);
-    }
-}
-
-function parseCustomTime(timeStr) {
-    const [hours, minutes, seconds] = timeStr.split(':').map(num => parseInt(num));
-    const date = new Date();
-    date.setHours(hours || 0);
-    date.setMinutes(minutes || 0);
-    date.setSeconds(seconds || 0);
-    return date;
-}
-
-// Make display editable when in custom mode
-function makeClockEditable(editable) {
-    clockElements.display.contentEditable = editable;
-}
-
-// Handle time input validation
-function handleTimeInput(element) {
-    element.addEventListener('blur', () => {
-        let timeStr = element.textContent;
-        let [hours, minutes, seconds] = timeStr.split(':').map(num => parseInt(num));
-        
-        // Validate hours, minutes, and seconds
-        hours = isNaN(hours) || hours < 0 || hours > 23 ? 0 : hours;
-        minutes = isNaN(minutes) || minutes < 0 || minutes > 59 ? 0 : minutes;
-        seconds = isNaN(seconds) || seconds < 0 || seconds > 59 ? 0 : seconds;
-        
-        // Format and update display
-        element.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        updateConversion();
-    });
-
-    element.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            element.blur();
-        }
-    });
-}
-
-// Setup event listeners
-timeControls.currentTimeBtn.addEventListener('click', function() {
-    timeControls.currentTimeBtn.classList.add('active');
-    timeControls.customTimeBtn.classList.remove('active');
-    makeClockEditable(false);
-    startClock();
-});
-
-timeControls.customTimeBtn.addEventListener('click', function() {
-    timeControls.customTimeBtn.classList.add('active');
-    timeControls.currentTimeBtn.classList.remove('active');
-    makeClockEditable(true);
-    clearInterval(clockInterval);
-});
-
-// Add timezone control listeners
-timezoneControls.swapBtn.addEventListener('click', () => {
-    const tempValue = timezoneControls.fromSelect.value;
-    timezoneControls.fromSelect.value = timezoneControls.toSelect.value;
-    timezoneControls.toSelect.value = tempValue;
-    updateConversion();
-});
-
-timezoneControls.fromSelect.addEventListener('change', updateConversion);
-timezoneControls.toSelect.addEventListener('change', updateConversion);
-
-// Add input handling to clock display
-handleTimeInput(clockElements.display);
-
-function startClock() {
-    if (clockInterval) {
-        clearInterval(clockInterval);
-    }
-    updateClock();
-    clockInterval = setInterval(updateClock, 1000);
-}
-
-function updateClock() {
+    const region = dstRules.timezone_to_region[timezone];
+    if (!region) return false;
+    
+    const rules = dstRules.regions[region];
     const now = new Date();
-    const timeString = now.toLocaleTimeString([], {
-        hour: '2-digit',
+    const currentMonth = now.getMonth() + 1; // JavaScript months are 0-based
+    
+    // Check if the city is in the exceptions list
+    if (rules.exceptions && rules.exceptions.includes(timezone)) {
+        return false;
+    }
+    
+    const startMonth = rules.start.month;
+    const endMonth = rules.end.month;
+    
+    // Southern hemisphere (e.g., Australia)
+    if (startMonth > endMonth) {
+        return currentMonth >= startMonth || currentMonth <= endMonth;
+    }
+    // Northern hemisphere
+    else {
+        return currentMonth >= startMonth && currentMonth <= endMonth;
+    }
+}
+
+// Calculate time for a specific timezone offset with DST
+function getTimeInTimezone(offset, timezone) {
+    const now = new Date();
+    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    
+    // Apply DST if active
+    let finalOffset = offset;
+    if (isDSTActive(timezone)) {
+        finalOffset += 1; // Add one hour for DST
+    }
+    
+    return new Date(utc + (3600000 * finalOffset));
+}
+
+// Format time for display
+function formatTime(date) {
+    return date.toLocaleTimeString('en-US', {
+        hour: 'numeric',
         minute: '2-digit',
         second: '2-digit',
-        hour12: false
+        hour12: true
     });
-    clockElements.display.textContent = timeString;
-    updateConversion();
 }
 
-// Initialize the clock and load timezones
-startClock();
-loadTimezones();
+// Update local time
+function updateLocalTime() {
+    const localTimeElement = document.getElementById('local-time');
+    if (!localTimeElement) return;
+    
+    const now = new Date();
+    localTimeElement.textContent = formatTime(now);
+}
+
+// Update all colleague times
+function updateColleagueTimes() {
+    const grid = document.getElementById('colleagues-grid');
+    if (!grid) return;
+    
+    grid.innerHTML = '';
+
+    colleagues.forEach((colleague, index) => {
+        const time = getTimeInTimezone(colleague.offset, colleague.timezone);
+        const dstActive = isDSTActive(colleague.timezone);
+        
+        const card = document.createElement('div');
+        card.className = 'colleague-card';
+        card.innerHTML = `
+            <div class="colleague-info">
+                <h3>${colleague.name}</h3>
+                <span class="colleague-time">${formatTime(time)}</span>
+                <span class="colleague-location">${colleague.emoji} ${colleague.city}, ${colleague.country}</span>
+                ${dstActive ? '<span class="dst-badge">DST</span>' : ''}
+            </div>
+            <button class="remove-btn" onclick="removeColleague(${index})">×</button>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+// Initialize location select
+async function initializeLocationSelect() {
+    const select = document.getElementById('colleague-location');
+    if (!select) return;
+    
+    try {
+        const response = await fetch('timezones.json');
+        const timezones = await response.json();
+        
+        // First option as placeholder
+        const placeholder = document.createElement('option');
+        placeholder.value = '';
+        placeholder.textContent = 'Select location';
+        placeholder.selected = true;
+        placeholder.disabled = true;
+        select.appendChild(placeholder);
+        
+        timezones.forEach(location => {
+            const option = document.createElement('option');
+            option.value = JSON.stringify(location);
+            option.textContent = `${location.emoji} ${location.city}, ${location.country}`;
+            select.appendChild(option);
+        });
+    } catch (error) {
+        console.error('Error loading locations:', error);
+        select.innerHTML = '<option value="">Error loading locations</option>';
+    }
+}
+
+// Add new colleague
+function addColleague(event) {
+    event.preventDefault();
+    
+    const nameInput = document.getElementById('colleague-name');
+    const locationSelect = document.getElementById('colleague-location');
+    
+    if (!nameInput || !locationSelect) return;
+    
+    const name = nameInput.value.trim();
+    
+    try {
+        const locationData = JSON.parse(locationSelect.value);
+        
+        if (!name || !locationData) {
+            alert('Please enter both name and location');
+            return;
+        }
+        
+        colleagues.push({
+            name,
+            ...locationData
+        });
+        
+        // Save to localStorage
+        localStorage.setItem('colleagues', JSON.stringify(colleagues));
+        
+        // Update display
+        updateColleagueTimes();
+        
+        // Clear form
+        nameInput.value = '';
+        locationSelect.value = '';
+        
+    } catch (error) {
+        console.error('Error adding colleague:', error);
+        alert('Please select a valid location');
+    }
+}
+
+// Remove colleague
+function removeColleague(index) {
+    colleagues.splice(index, 1);
+    localStorage.setItem('colleagues', JSON.stringify(colleagues));
+    updateColleagueTimes();
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', async () => {
+    // Load DST rules first
+    await loadDSTRules();
+    
+    // Initialize the location select
+    initializeLocationSelect();
+    
+    // Update times immediately
+    updateLocalTime();
+    updateColleagueTimes();
+    
+    // Update times every second
+    setInterval(() => {
+        updateLocalTime();
+        updateColleagueTimes();
+    }, 1000);
+    
+    // Set up form submission
+    const form = document.getElementById('add-colleague-form');
+    if (form) {
+        form.addEventListener('submit', addColleague);
+    }
+});

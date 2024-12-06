@@ -1,0 +1,140 @@
+{
+    "regions": {
+        "US": {
+            "start": {
+                "month": 3,
+                "week": "second",
+                "day": "Sunday",
+                "time": "02:00"
+            },
+            "end": {
+                "month": 11,
+                "week": "first",
+                "day": "Sunday",
+                "time": "02:00"
+            },
+            "offset": 1
+        },
+        "EU": {
+            "start": {
+                "month": 3,
+                "week": "last",
+                "day": "Sunday",
+                "time": "01:00"
+            },
+            "end": {
+                "month": 10,
+                "week": "last",
+                "day": "Sunday",
+                "time": "01:00"
+            },
+            "offset": 1
+        },
+        "Australia": {
+            "start": {
+                "month": 10,
+                "week": "first",
+                "day": "Sunday",
+                "time": "02:00"
+            },
+            "end": {
+                "month": 4,
+                "week": "first",
+                "day": "Sunday",
+                "time": "03:00"
+            },
+            "offset": 1,
+            "exceptions": ["Brisbane", "Darwin", "Perth"]
+        },
+        "New_Zealand": {
+            "start": {
+                "month": 9,
+                "week": "last",
+                "day": "Sunday",
+                "time": "02:00"
+            },
+            "end": {
+                "month": 4,
+                "week": "first",
+                "day": "Sunday",
+                "time": "03:00"
+            },
+            "offset": 1
+        },
+        "Brazil": {
+            "start": {
+                "month": 11,
+                "week": "first",
+                "day": "Sunday",
+                "time": "00:00"
+            },
+            "end": {
+                "month": 2,
+                "week": "third",
+                "day": "Sunday",
+                "time": "00:00"
+            },
+            "offset": 1
+        }
+    },
+    "timezone_to_region": {
+        "America/Los_Angeles": "US",
+        "America/New_York": "US",
+        "America/Chicago": "US",
+        "America/Denver": "US",
+        "America/Phoenix": null,
+        "America/Anchorage": "US",
+        "Pacific/Honolulu": null,
+        "America/Toronto": "US",
+        "America/Vancouver": "US",
+        "America/Mexico_City": null,
+        "America/Sao_Paulo": "Brazil",
+        "America/Argentina/Buenos_Aires": null,
+        "America/Santiago": "Brazil",
+        "America/Lima": null,
+        "America/Bogota": null,
+        "America/Caracas": null,
+        "Europe/London": "EU",
+        "Europe/Paris": "EU",
+        "Europe/Berlin": "EU",
+        "Europe/Amsterdam": "EU",
+        "Europe/Rome": "EU",
+        "Europe/Madrid": "EU",
+        "Europe/Stockholm": "EU",
+        "Europe/Oslo": "EU",
+        "Europe/Copenhagen": "EU",
+        "Europe/Helsinki": "EU",
+        "Europe/Warsaw": "EU",
+        "Europe/Prague": "EU",
+        "Europe/Vienna": "EU",
+        "Europe/Budapest": "EU",
+        "Europe/Moscow": null,
+        "Asia/Dubai": null,
+        "Asia/Tel_Aviv": "EU",
+        "Europe/Istanbul": "EU",
+        "Africa/Cairo": null,
+        "Africa/Lagos": null,
+        "Africa/Nairobi": null,
+        "Africa/Johannesburg": null,
+        "Asia/Kolkata": null,
+        "Asia/Karachi": null,
+        "Asia/Dhaka": null,
+        "Asia/Bangkok": null,
+        "Asia/Singapore": null,
+        "Asia/Kuala_Lumpur": null,
+        "Asia/Jakarta": null,
+        "Asia/Manila": null,
+        "Asia/Hong_Kong": null,
+        "Asia/Shanghai": null,
+        "Asia/Taipei": null,
+        "Asia/Seoul": null,
+        "Asia/Tokyo": null,
+        "Australia/Sydney": "Australia",
+        "Australia/Melbourne": "Australia",
+        "Australia/Brisbane": null,
+        "Australia/Perth": null,
+        "Australia/Adelaide": "Australia",
+        "Australia/Darwin": null,
+        "Pacific/Auckland": "New_Zealand"
+    }
+}

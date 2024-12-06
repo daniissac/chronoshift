@@ -1,4 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M12 5C6.48 5 5 8.52 5 14s1.48 9 3 15z"/>
-  <path d="M21 19h-9c-2.21 0-4-1.79-4-7V11l-2.01-1.22C6.45 6.77 8 10 12 14s5.55 7.62 7.81 9c3.24-2.07 6.57-3.58 10-4h1c1.83 0 3.33-.34 4.5-1l2.01-1.22C17 9.77 19 11 21 19z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background circle -->
+    <circle cx="256" cy="256" r="240" fill="#2563eb"/>
+    
+    <!-- Team members -->
+    <!-- Center person -->
+    <circle cx="256" cy="200" r="60" fill="#ffffff"/>
+    <path d="M 176 380 C 176 300 336 300 336 380" fill="#ffffff"/>
+    
+    <!-- Left person -->
+    <circle cx="146" cy="220" r="45" fill="#ffffff" opacity="0.9"/>
+    <path d="M 86 360 C 86 300 206 300 206 360" fill="#ffffff" opacity="0.9"/>
+    
+    <!-- Right person -->
+    <circle cx="366" cy="220" r="45" fill="#ffffff" opacity="0.9"/>
+    <path d="M 306 360 C 306 300 426 300 426 360" fill="#ffffff" opacity="0.9"/>
+    
+    <!-- Clock hands (subtle in background) -->
+    <line x1="256" y1="256" x2="256" y2="160" 
+          stroke="#1e40af" stroke-width="8" stroke-linecap="round"
+          transform="rotate(45 256 256)"/>
+    <line x1="256" y1="256" x2="256" y2="120"
+          stroke="#1e40af" stroke-width="6" stroke-linecap="round"
+          transform="rotate(180 256 256)"/>
 </svg>

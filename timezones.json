@@ -1,464 +1,1052 @@
 [
-  {
-    "value": "UTC-12",
-    "abbr": "DST",
-    "offset": -12,
-    "isdst": false,
-    "text": "(UTC-12:00) International Date Line West"
-  },
-  {
-    "value": "UTC-11",
-    "abbr": "U",
-    "offset": -11,
-    "isdst": false,
-    "text": "(UTC-11:00) Coordinated Universal Time-11"
-  },
-  {
-    "value": "Hawaiian Standard Time",
-    "abbr": "HST",
-    "offset": -10,
-    "isdst": false,
-    "text": "(UTC-10:00) Hawaii"
-  },
-  {
-    "value": "Alaskan Standard Time",
-    "abbr": "AKDT",
-    "offset": -8,
-    "isdst": true,
-    "text": "(UTC-09:00) Alaska"
-  },
-  {
-    "value": "Pacific Standard Time (Mexico)",
-    "abbr": "PDT",
-    "offset": -7,
-    "isdst": true,
-    "text": "(UTC-07:00) Baja California"
-  },
-  {
-    "value": "Pacific Daylight Time",
-    "abbr": "PDT",
-    "offset": -7,
-    "isdst": true,
-    "text": "(UTC-07:00) Pacific Daylight Time (US & Canada)"
-  },
-  {
-    "value": "Pacific Standard Time",
-    "abbr": "PST",
-    "offset": -8,
-    "isdst": false,
-    "text": "(UTC-08:00) Pacific Standard Time (US & Canada)"
-  },
-  {
-    "value": "US Mountain Standard Time",
-    "abbr": "UMST",
-    "offset": -7,
-    "isdst": false,
-    "text": "(UTC-07:00) Arizona"
-  },
-  {
-    "value": "Mountain Standard Time (Mexico)",
-    "abbr": "MDT",
-    "offset": -6,
-    "isdst": true,
-    "text": "(UTC-06:00) Chihuahua, La Paz, Mazatlan"
-  },
-  {
-    "value": "Mountain Standard Time",
-    "abbr": "MDT",
-    "offset": -6,
-    "isdst": true,
-    "text": "(UTC-07:00) Mountain Time (US & Canada)"
-  },
-  {
-    "value": "Central America Standard Time",
-    "abbr": "CAST",
-    "offset": -6,
-    "isdst": false,
-    "text": "(UTC-06:00) Central America"
-  },
-  {
-    "value": "Central Standard Time",
-    "abbr": "CDT",
-    "offset": -5,
-    "isdst": true,
-    "text": "(UTC-05:00) Central Time (US & Canada)"
-  },
-  {
-    "value": "Eastern Standard Time",
-    "abbr": "EST",
-    "offset": -5,
-    "isdst": false,
-    "text": "(UTC-05:00) Eastern Time (US & Canada)"
-  },
-  {
-    "value": "Eastern Daylight Time",
-    "abbr": "EDT",
-    "offset": -4,
-    "isdst": true,
-    "text": "(UTC-04:00) Eastern Daylight Time (US & Canada)"
-  },
-  {
-    "value": "Central Brazilian Standard Time",
-    "abbr": "CBST",
-    "offset": -4,
-    "isdst": false,
-    "text": "(UTC-04:00) Cuiaba"
-  },
-  {
-    "value": "SA Western Standard Time",
-    "abbr": "SWST",
-    "offset": -4,
-    "isdst": false,
-    "text": "(UTC-04:00) Georgetown, La Paz, Manaus, San Juan"
-  },
-  {
-    "value": "Greenland Standard Time",
-    "abbr": "GDT",
-    "offset": -3,
-    "isdst": true,
-    "text": "(UTC-03:00) Greenland"
-  },
-  {
-    "value": "Atlantic Standard Time",
-    "abbr": "ADT",
-    "offset": -3,
-    "isdst": true,
-    "text": "(UTC-03:00) Atlantic Time (Canada)"
-  },
-  {
-    "value": "Namibia Standard Time",
-    "abbr": "NST",
-    "offset": -1,
-    "isdst": false,
-    "text": "(UTC+01:00) Windhoek"
-  },
-  {
-    "value": "GTB Standard Time",
-    "abbr": "GDT",
-    "offset": 3,
-    "isdst": true,
-    "text": "(UTC+02:00) Athens, Bucharest"
-  },
-  {
-    "value": "Middle East Standard Time",
-    "abbr": "MEDT",
-    "offset": 3,
-    "isdst": true,
-    "text": "(UTC+03:00) Beirut"
-  },
-  {
-    "value": "Egypt Standard Time",
-    "abbr": "EST",
-    "offset": 2,
-    "isdst": false,
-    "text": "(UTC+02:00) Cairo"
-  },
-  {
-    "value": "Syria Standard Time",
-    "abbr": "SDT",
-    "offset": 3,
-    "isdst": true,
-    "text": "(UTC+03:00) Damascus"
-  },
-  {
-    "value": "Turkey Standard Time",
-    "abbr": "TDT",
-    "offset": 3,
-    "isdst": false,
-    "text": "(UTC+03:00) Istanbul"
-  },
-  {
-    "value": "Israel Standard Time",
-    "abbr": "JDT",
-    "offset": 3,
-    "isdst": true,
-    "text": "(UTC+02:00) Jerusalem"
-  },
-  {
-    "value": "Libya Standard Time",
-    "abbr": "LST",
-    "offset": 2,
-    "isdst": false,
-    "text": "(UTC+02:00) Tripoli"
-  },
-  {
-    "value": "Jordan Standard Time",
-    "abbr": "JST",
-    "offset": 3,
-    "isdst": false,
-    "text": "(UTC+03:00) Amman"
-  },
-  {
-    "value": "Arabic Standard Time",
-    "abbr": "AST",
-    "offset": 4,
-    "isdst": false,
-    "text": "(UTC+04:00) Baghdad"
-  },
-  {
-    "value": "Kaliningrad Standard Time",
-    "abbr": "KST",
-    "offset": 3,
-    "isdst": false,
-    "text": "(UTC+02:00) Kaliningrad"
-  },
-  {
-    "value": "Arabian Standard Time",
-    "abbr": "AST",
-    "offset": 4,
-    "isdst": false,
-    "text": "(UTC+04:00) Abu Dhabi, Muscat"
-  },
-  {
-    "value": "Azerbaijan Standard Time",
-    "abbr": "ADT",
-    "offset": 5,
-    "isdst": true,
-    "text": "(UTC+04:00) Baku"
-  },
-  {
-    "value": "Mauritius Standard Time",
-    "abbr": "MST",
-    "offset": 4,
-    "isdst": false,
-    "text": "(UTC+04:00) Port Louis"
-  },
-  {
-    "value": "Georgian Standard Time",
-    "abbr": "GET",
-    "offset": 4,
-    "isdst": false,
-    "text": "(UTC+04:00) Tbilisi"
-  },
-  {
-    "value": "Caucasus Standard Time",
-    "abbr": "CST",
-    "offset": 4,
-    "isdst": false,
-    "text": "(UTC+04:00) Yerevan"
-  },
-  {
-    "value": "Afghanistan Standard Time",
-    "abbr": "AST",
-    "offset": 4.5,
-    "isdst": false,
-    "text": "(UTC+04:30) Kabul"
-  },
-  {
-    "value": "West Asia Standard Time",
-    "abbr": "WAST",
-    "offset": 5,
-    "isdst": false,
-    "text": "(UTC+05:00) Ashgabat, Tashkent"
-  },
-  {
-    "value": "Yekaterinburg Time",
-    "abbr": "YEKT",
-    "offset": 5,
-    "isdst": false,
-    "text": "(UTC+05:00) Yekaterinburg"
-  },
-  {
-    "value": "Pakistan Standard Time",
-    "abbr": "PKT",
-    "offset": 5,
-    "isdst": false,
-    "text": "(UTC+05:00) Islamabad, Karachi"
-  },
-  {
-    "value": "India Standard Time",
-    "abbr": "IST",
-    "offset": 5.5,
-    "isdst": false,
-    "text": "(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi"
-  },
-  {
-    "value": "Sri Lanka Standard Time",
-    "abbr": "SLST",
-    "offset": 5.5,
-    "isdst": false,
-    "text": "(UTC+05:30) Sri Jayawardenepura"
-  },
-  {
-    "value": "Nepal Standard Time",
-    "abbr": "NST",
-    "offset": 5.75,
-    "isdst": false,
-    "text": "(UTC+05:45) Kathmandu"
-  },
-  {
-    "value": "Central Asia Standard Time",
-    "abbr": "CAST",
-    "offset": 6,
-    "isdst": false,
-    "text": "(UTC+06:00) Nur-Sultan (Astana)"
-  },
-  {
-    "value": "Bangladesh Standard Time",
-    "abbr": "BST",
-    "offset": 6,
-    "isdst": false,
-    "text": "(UTC+06:00) Dhaka"
-  },
-  {
-    "value": "Myanmar Standard Time",
-    "abbr": "MST",
-    "offset": 6.5,
-    "isdst": false,
-    "text": "(UTC+06:30) Yangon (Rangoon)"
-  },
-  {
-    "value": "SE Asia Standard Time",
-    "abbr": "SAST",
-    "offset": 7,
-    "isdst": false,
-    "text": "(UTC+07:00) Bangkok, Hanoi, Jakarta"
-  },
-  {
-    "value": "N. Central Asia Standard Time",
-    "abbr": "NCAST",
-    "offset": 7,
-    "isdst": false,
-    "text": "(UTC+07:00) Novosibirsk"
-  },
-  {
-    "value": "China Standard Time",
-    "abbr": "CST",
-    "offset": 8,
-    "isdst": false,
-    "text": "(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi"
-  },
-  {
-    "value": "North Asia East Standard Time",
-    "abbr": "NAEST",
-    "offset": 8,
-    "isdst": false,
-    "text": "(UTC+08:00) Irkutsk"
-  },
-  {
-    "value": "Japan Standard Time",
-    "abbr": "JST",
-    "offset": 9,
-    "isdst": false,
-    "text": "(UTC+09:00) Osaka, Sapporo, Tokyo"
-  },
-  {
-    "value": "Korea Standard Time",
-    "abbr": "KST",
-    "offset": 9,
-    "isdst": false,
-    "text": "(UTC+09:00) Seoul"
-  },
-  {
-    "value": "Cen. Australia Standard Time",
-    "abbr": "CAST",
-    "offset": 9.5,
-    "isdst": false,
-    "text": "(UTC+09:30) Adelaide"
-  },
-  {
-    "value": "AUS Central Standard Time",
-    "abbr": "ACST",
-    "offset": 9.5,
-    "isdst": false,
-    "text": "(UTC+09:30) Darwin"
-  },
-  {
-    "value": "E. Australia Standard Time",
-    "abbr": "EAST",
-    "offset": 10,
-    "isdst": false,
-    "text": "(UTC+10:00) Brisbane"
-  },
-  {
-    "value": "AUS Eastern Standard Time",
-    "abbr": "AEST",
-    "offset": 10,
-    "isdst": false,
-    "text": "(UTC+10:00) Canberra, Melbourne, Sydney"
-  },
-  {
-    "value": "West Pacific Standard Time",
-    "abbr": "WPST",
-    "offset": 10,
-    "isdst": false,
-    "text": "(UTC+10:00) Guam, Port Moresby"
-  },
-  {
-    "value": "Tasmania Standard Time",
-    "abbr": "TST",
-    "offset": 10,
-    "isdst": false,
-    "text": "(UTC+10:00) Hobart"
-  },
-  {
-    "value": "Yakutsk Standard Time",
-    "abbr": "YST",
-    "offset": 9,
-    "isdst": false,
-    "text": "(UTC+09:00) Yakutsk"
-  },
-  {
-    "value": "Central Pacific Standard Time",
-    "abbr": "CPST",
-    "offset": 11,
-    "isdst": false,
-    "text": "(UTC+11:00) Solomon Is., New Caledonia"
-  },
-  {
-    "value": "Vladivostok Standard Time",
-    "abbr": "VST",
-    "offset": 11,
-    "isdst": false,
-    "text": "(UTC+11:00) Vladivostok"
-  },
-  {
-    "value": "New Zealand Standard Time",
-    "abbr": "NZST",
-    "offset": 12,
-    "isdst": false,
-    "text": "(UTC+12:00) Auckland, Wellington"
-  },
-  {
-    "value": "UTC+12",
-    "abbr": "U",
-    "offset": 12,
-    "isdst": false,
-    "text": "(UTC+12:00) Coordinated Universal Time+12"
-  },
-  {
-    "value": "Fiji Standard Time",
-    "abbr": "FST",
-    "offset": 12,
-    "isdst": false,
-    "text": "(UTC+12:00) Fiji"
-  },
-  {
-    "value": "Magadan Standard Time",
-    "abbr": "MST",
-    "offset": 12,
-    "isdst": false,
-    "text": "(UTC+12:00) Magadan"
-  },
-  {
-    "value": "Kamchatka Standard Time",
-    "abbr": "KDT",
-    "offset": 13,
-    "isdst": true,
-    "text": "(UTC+12:00) Petropavlovsk-Kamchatsky - Old"
-  },
-  {
-    "value": "Tonga Standard Time",
-    "abbr": "TST",
-    "offset": 13,
-    "isdst": false,
-    "text": "(UTC+13:00) Nuku'alofa"
-  },
-  {
-    "value": "Samoa Standard Time",
-    "abbr": "SST",
-    "offset": 13,
-    "isdst": false,
-    "text": "(UTC+13:00) Samoa"
-  }
+    {
+        "city": "San Francisco",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "offset": -7,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "New York",
+        "country": "USA", 
+        "timezone": "America/New_York",
+        "offset": -4,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Chicago",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "offset": -5,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Toronto",
+        "country": "Canada",
+        "timezone": "America/Toronto",
+        "offset": -4,
+        "emoji": "🇨🇦"
+    },
+    {
+        "city": "Vancouver",
+        "country": "Canada",
+        "timezone": "America/Vancouver",
+        "offset": -7,
+        "emoji": "🇨🇦"
+    },
+    {
+        "city": "Mexico City",
+        "country": "Mexico",
+        "timezone": "America/Mexico_City",
+        "offset": -5,
+        "emoji": "🇲🇽"
+    },
+    {
+        "city": "São Paulo",
+        "country": "Brazil",
+        "timezone": "America/Sao_Paulo",
+        "offset": -3,
+        "emoji": "🇧🇷"
+    },
+    {
+        "city": "Rio de Janeiro",
+        "country": "Brazil",
+        "timezone": "America/Sao_Paulo",
+        "offset": -3,
+        "emoji": "🇧🇷"
+    },
+    {
+        "city": "Buenos Aires",
+        "country": "Argentina",
+        "timezone": "America/Argentina/Buenos_Aires",
+        "offset": -3,
+        "emoji": "🇦🇷"
+    },
+    {
+        "city": "Santiago",
+        "country": "Chile",
+        "timezone": "America/Santiago",
+        "offset": -4,
+        "emoji": "🇨🇱"
+    },
+    {
+        "city": "Lima",
+        "country": "Peru",
+        "timezone": "America/Lima",
+        "offset": -5,
+        "emoji": "🇵🇪"
+    },
+    {
+        "city": "Bogota",
+        "country": "Colombia",
+        "timezone": "America/Bogota",
+        "offset": -5,
+        "emoji": "🇨🇴"
+    },
+    {
+        "city": "Caracas",
+        "country": "Venezuela",
+        "timezone": "America/Caracas",
+        "offset": -4,
+        "emoji": "🇻🇪"
+    },
+    {
+        "city": "London",
+        "country": "UK",
+        "timezone": "Europe/London",
+        "offset": 1,
+        "emoji": "🇬🇧"
+    },
+    {
+        "city": "Manchester",
+        "country": "UK",
+        "timezone": "Europe/London",
+        "offset": 1,
+        "emoji": "🇬🇧"
+    },
+    {
+        "city": "Paris",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "offset": 2,
+        "emoji": "🇫🇷"
+    },
+    {
+        "city": "Berlin",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "offset": 2,
+        "emoji": "🇩🇪"
+    },
+    {
+        "city": "Munich",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "offset": 2,
+        "emoji": "🇩🇪"
+    },
+    {
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "timezone": "Europe/Amsterdam",
+        "offset": 2,
+        "emoji": "🇳🇱"
+    },
+    {
+        "city": "Rome",
+        "country": "Italy",
+        "timezone": "Europe/Rome",
+        "offset": 2,
+        "emoji": "🇮🇹"
+    },
+    {
+        "city": "Milan",
+        "country": "Italy",
+        "timezone": "Europe/Rome",
+        "offset": 2,
+        "emoji": "🇮🇹"
+    },
+    {
+        "city": "Madrid",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "offset": 2,
+        "emoji": "🇪🇸"
+    },
+    {
+        "city": "Barcelona",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "offset": 2,
+        "emoji": "🇪🇸"
+    },
+    {
+        "city": "Stockholm",
+        "country": "Sweden",
+        "timezone": "Europe/Stockholm",
+        "offset": 2,
+        "emoji": "🇸🇪"
+    },
+    {
+        "city": "Oslo",
+        "country": "Norway",
+        "timezone": "Europe/Oslo",
+        "offset": 2,
+        "emoji": "🇳🇴"
+    },
+    {
+        "city": "Copenhagen",
+        "country": "Denmark",
+        "timezone": "Europe/Copenhagen",
+        "offset": 2,
+        "emoji": "🇩🇰"
+    },
+    {
+        "city": "Helsinki",
+        "country": "Finland",
+        "timezone": "Europe/Helsinki",
+        "offset": 3,
+        "emoji": "🇫🇮"
+    },
+    {
+        "city": "Warsaw",
+        "country": "Poland",
+        "timezone": "Europe/Warsaw",
+        "offset": 2,
+        "emoji": "🇵🇱"
+    },
+    {
+        "city": "Prague",
+        "country": "Czech Republic",
+        "timezone": "Europe/Prague",
+        "offset": 2,
+        "emoji": "🇨🇿"
+    },
+    {
+        "city": "Vienna",
+        "country": "Austria",
+        "timezone": "Europe/Vienna",
+        "offset": 2,
+        "emoji": "🇦🇹"
+    },
+    {
+        "city": "Budapest",
+        "country": "Hungary",
+        "timezone": "Europe/Budapest",
+        "offset": 2,
+        "emoji": "🇭🇺"
+    },
+    {
+        "city": "Moscow",
+        "country": "Russia",
+        "timezone": "Europe/Moscow",
+        "offset": 3,
+        "emoji": "🇷🇺"
+    },
+    {
+        "city": "St. Petersburg",
+        "country": "Russia",
+        "timezone": "Europe/Moscow",
+        "offset": 3,
+        "emoji": "🇷🇺"
+    },
+    {
+        "city": "Dubai",
+        "country": "UAE",
+        "timezone": "Asia/Dubai",
+        "offset": 4,
+        "emoji": "🇦🇪"
+    },
+    {
+        "city": "Abu Dhabi",
+        "country": "UAE",
+        "timezone": "Asia/Dubai",
+        "offset": 4,
+        "emoji": "🇦🇪"
+    },
+    {
+        "city": "Tel Aviv",
+        "country": "Israel",
+        "timezone": "Asia/Tel_Aviv",
+        "offset": 3,
+        "emoji": "🇮🇱"
+    },
+    {
+        "city": "Istanbul",
+        "country": "Turkey",
+        "timezone": "Europe/Istanbul",
+        "offset": 3,
+        "emoji": "🇹🇷"
+    },
+    {
+        "city": "Cairo",
+        "country": "Egypt",
+        "timezone": "Africa/Cairo",
+        "offset": 2,
+        "emoji": "🇪🇬"
+    },
+    {
+        "city": "Lagos",
+        "country": "Nigeria",
+        "timezone": "Africa/Lagos",
+        "offset": 1,
+        "emoji": "🇳🇬"
+    },
+    {
+        "city": "Nairobi",
+        "country": "Kenya",
+        "timezone": "Africa/Nairobi",
+        "offset": 3,
+        "emoji": "🇰🇪"
+    },
+    {
+        "city": "Johannesburg",
+        "country": "South Africa",
+        "timezone": "Africa/Johannesburg",
+        "offset": 2,
+        "emoji": "🇿🇦"
+    },
+    {
+        "city": "Cape Town",
+        "country": "South Africa",
+        "timezone": "Africa/Johannesburg",
+        "offset": 2,
+        "emoji": "🇿🇦"
+    },
+    {
+        "city": "Mumbai",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "offset": 5.5,
+        "emoji": "🇮🇳"
+    },
+    {
+        "city": "New Delhi",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "offset": 5.5,
+        "emoji": "🇮🇳"
+    },
+    {
+        "city": "Bangalore",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "offset": 5.5,
+        "emoji": "🇮🇳"
+    },
+    {
+        "city": "Chennai",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "offset": 5.5,
+        "emoji": "🇮🇳"
+    },
+    {
+        "city": "Karachi",
+        "country": "Pakistan",
+        "timezone": "Asia/Karachi",
+        "offset": 5,
+        "emoji": "🇵🇰"
+    },
+    {
+        "city": "Dhaka",
+        "country": "Bangladesh",
+        "timezone": "Asia/Dhaka",
+        "offset": 6,
+        "emoji": "🇧🇩"
+    },
+    {
+        "city": "Bangkok",
+        "country": "Thailand",
+        "timezone": "Asia/Bangkok",
+        "offset": 7,
+        "emoji": "🇹🇭"
+    },
+    {
+        "city": "Singapore",
+        "country": "Singapore",
+        "timezone": "Asia/Singapore",
+        "offset": 8,
+        "emoji": "🇸🇬"
+    },
+    {
+        "city": "Kuala Lumpur",
+        "country": "Malaysia",
+        "timezone": "Asia/Kuala_Lumpur",
+        "offset": 8,
+        "emoji": "🇲🇾"
+    },
+    {
+        "city": "Jakarta",
+        "country": "Indonesia",
+        "timezone": "Asia/Jakarta",
+        "offset": 7,
+        "emoji": "🇮🇩"
+    },
+    {
+        "city": "Manila",
+        "country": "Philippines",
+        "timezone": "Asia/Manila",
+        "offset": 8,
+        "emoji": "🇵🇭"
+    },
+    {
+        "city": "Hong Kong",
+        "country": "China",
+        "timezone": "Asia/Hong_Kong",
+        "offset": 8,
+        "emoji": "🇭🇰"
+    },
+    {
+        "city": "Shanghai",
+        "country": "China",
+        "timezone": "Asia/Shanghai",
+        "offset": 8,
+        "emoji": "🇨🇳"
+    },
+    {
+        "city": "Beijing",
+        "country": "China",
+        "timezone": "Asia/Shanghai",
+        "offset": 8,
+        "emoji": "🇨🇳"
+    },
+    {
+        "city": "Guangzhou",
+        "country": "China",
+        "timezone": "Asia/Shanghai",
+        "offset": 8,
+        "emoji": "🇨🇳"
+    },
+    {
+        "city": "Taipei",
+        "country": "Taiwan",
+        "timezone": "Asia/Taipei",
+        "offset": 8,
+        "emoji": "🇹🇼"
+    },
+    {
+        "city": "Seoul",
+        "country": "South Korea",
+        "timezone": "Asia/Seoul",
+        "offset": 9,
+        "emoji": "🇰🇷"
+    },
+    {
+        "city": "Busan",
+        "country": "South Korea",
+        "timezone": "Asia/Seoul",
+        "offset": 9,
+        "emoji": "🇰🇷"
+    },
+    {
+        "city": "Tokyo",
+        "country": "Japan",
+        "timezone": "Asia/Tokyo",
+        "offset": 9,
+        "emoji": "🇯🇵"
+    },
+    {
+        "city": "Osaka",
+        "country": "Japan",
+        "timezone": "Asia/Tokyo",
+        "offset": 9,
+        "emoji": "🇯🇵"
+    },
+    {
+        "city": "Sydney",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "offset": 10,
+        "emoji": "🇦🇺"
+    },
+    {
+        "city": "Melbourne",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "offset": 10,
+        "emoji": "🇦🇺"
+    },
+    {
+        "city": "Brisbane",
+        "country": "Australia",
+        "timezone": "Australia/Brisbane",
+        "offset": 10,
+        "emoji": "🇦🇺"
+    },
+    {
+        "city": "Perth",
+        "country": "Australia",
+        "timezone": "Australia/Perth",
+        "offset": 8,
+        "emoji": "🇦🇺"
+    },
+    {
+        "city": "Adelaide",
+        "country": "Australia",
+        "timezone": "Australia/Adelaide",
+        "offset": 9.5,
+        "emoji": "🇦🇺"
+    },
+    {
+        "city": "Darwin",
+        "country": "Australia",
+        "timezone": "Australia/Darwin",
+        "offset": 9.5,
+        "emoji": "🇦🇺"
+    },
+    {
+        "city": "Auckland",
+        "country": "New Zealand",
+        "timezone": "Pacific/Auckland",
+        "offset": 12,
+        "emoji": "🇳🇿"
+    },
+    {
+        "city": "Wellington",
+        "country": "New Zealand",
+        "timezone": "Pacific/Auckland",
+        "offset": 12,
+        "emoji": "🇳🇿"
+    },
+    {
+        "city": "Christchurch",
+        "country": "New Zealand",
+        "timezone": "Pacific/Auckland",
+        "offset": 12,
+        "emoji": "🇳🇿"
+    },
+    {
+        "city": "Honolulu",
+        "country": "USA",
+        "timezone": "Pacific/Honolulu",
+        "offset": -10,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Anchorage",
+        "country": "USA",
+        "timezone": "America/Anchorage",
+        "offset": -8,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Phoenix",
+        "country": "USA",
+        "timezone": "America/Phoenix",
+        "offset": -7,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Denver",
+        "country": "USA",
+        "timezone": "America/Denver",
+        "offset": -6,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Houston",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "offset": -5,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Miami",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "offset": -4,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Seattle",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "offset": -7,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Portland",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "offset": -7,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Las Vegas",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "offset": -7,
+        "emoji": "🇺🇸"
+    },
+    {
+        "city": "Edmonton",
+        "country": "Canada",
+        "timezone": "America/Edmonton",
+        "offset": -6,
+        "emoji": "🇨🇦"
+    },
+    {
+        "city": "Calgary",
+        "country": "Canada",
+        "timezone": "America/Edmonton",
+        "offset": -6,
+        "emoji": "🇨🇦"
+    },
+    {
+        "city": "Winnipeg",
+        "country": "Canada",
+        "timezone": "America/Winnipeg",
+        "offset": -5,
+        "emoji": "🇨🇦"
+    },
+    {
+        "city": "Ottawa",
+        "country": "Canada",
+        "timezone": "America/Toronto",
+        "offset": -4,
+        "emoji": "🇨🇦"
+    },
+    {
+        "city": "Montreal",
+        "country": "Canada",
+        "timezone": "America/Toronto",
+        "offset": -4,
+        "emoji": "🇨🇦"
+    },
+    {
+        "city": "Quebec City",
+        "country": "Canada",
+        "timezone": "America/Toronto",
+        "offset": -4,
+        "emoji": "🇨🇦"
+    },
+    {
+        "city": "Halifax",
+        "country": "Canada",
+        "timezone": "America/Halifax",
+        "offset": -3,
+        "emoji": "🇨🇦"
+    },
+    {
+        "city": "St. John's",
+        "country": "Canada",
+        "timezone": "America/St_Johns",
+        "offset": -2.5,
+        "emoji": "🇨🇦"
+    },
+    {
+        "city": "Guadalajara",
+        "country": "Mexico",
+        "timezone": "America/Mexico_City",
+        "offset": -5,
+        "emoji": "🇲🇽"
+    },
+    {
+        "city": "Monterrey",
+        "country": "Mexico",
+        "timezone": "America/Monterrey",
+        "offset": -5,
+        "emoji": "🇲🇽"
+    },
+    {
+        "city": "Cancun",
+        "country": "Mexico",
+        "timezone": "America/Cancun",
+        "offset": -5,
+        "emoji": "🇲🇽"
+    },
+    {
+        "city": "Tijuana",
+        "country": "Mexico",
+        "timezone": "America/Tijuana",
+        "offset": -7,
+        "emoji": "🇲🇽"
+    },
+    {
+        "city": "Recife",
+        "country": "Brazil",
+        "timezone": "America/Recife",
+        "offset": -3,
+        "emoji": "🇧🇷"
+    },
+    {
+        "city": "Salvador",
+        "country": "Brazil",
+        "timezone": "America/Bahia",
+        "offset": -3,
+        "emoji": "🇧🇷"
+    },
+    {
+        "city": "Brasilia",
+        "country": "Brazil",
+        "timezone": "America/Sao_Paulo",
+        "offset": -3,
+        "emoji": "🇧🇷"
+    },
+    {
+        "city": "Manaus",
+        "country": "Brazil",
+        "timezone": "America/Manaus",
+        "offset": -4,
+        "emoji": "🇧🇷"
+    },
+    {
+        "city": "Cordoba",
+        "country": "Argentina",
+        "timezone": "America/Argentina/Cordoba",
+        "offset": -3,
+        "emoji": "🇦🇷"
+    },
+    {
+        "city": "Mendoza",
+        "country": "Argentina",
+        "timezone": "America/Argentina/Mendoza",
+        "offset": -3,
+        "emoji": "🇦🇷"
+    },
+    {
+        "city": "Glasgow",
+        "country": "UK",
+        "timezone": "Europe/London",
+        "offset": 1,
+        "emoji": "🇬🇧"
+    },
+    {
+        "city": "Birmingham",
+        "country": "UK",
+        "timezone": "Europe/London",
+        "offset": 1,
+        "emoji": "🇬🇧"
+    },
+    {
+        "city": "Liverpool",
+        "country": "UK",
+        "timezone": "Europe/London",
+        "offset": 1,
+        "emoji": "🇬🇧"
+    },
+    {
+        "city": "Edinburgh",
+        "country": "UK",
+        "timezone": "Europe/London",
+        "offset": 1,
+        "emoji": "🇬🇧"
+    },
+    {
+        "city": "Lyon",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "offset": 2,
+        "emoji": "🇫🇷"
+    },
+    {
+        "city": "Marseille",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "offset": 2,
+        "emoji": "🇫🇷"
+    },
+    {
+        "city": "Nice",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "offset": 2,
+        "emoji": "🇫🇷"
+    },
+    {
+        "city": "Bordeaux",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "offset": 2,
+        "emoji": "🇫🇷"
+    },
+    {
+        "city": "Hamburg",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "offset": 2,
+        "emoji": "🇩🇪"
+    },
+    {
+        "city": "Frankfurt",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "offset": 2,
+        "emoji": "🇩🇪"
+    },
+    {
+        "city": "Cologne",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "offset": 2,
+        "emoji": "🇩🇪"
+    },
+    {
+        "city": "Rotterdam",
+        "country": "Netherlands",
+        "timezone": "Europe/Amsterdam",
+        "offset": 2,
+        "emoji": "🇳🇱"
+    },
+    {
+        "city": "The Hague",
+        "country": "Netherlands",
+        "timezone": "Europe/Amsterdam",
+        "offset": 2,
+        "emoji": "🇳🇱"
+    },
+    {
+        "city": "Utrecht",
+        "country": "Netherlands",
+        "timezone": "Europe/Amsterdam",
+        "offset": 2,
+        "emoji": "🇳🇱"
+    },
+    {
+        "city": "Naples",
+        "country": "Italy",
+        "timezone": "Europe/Rome",
+        "offset": 2,
+        "emoji": "🇮🇹"
+    },
+    {
+        "city": "Turin",
+        "country": "Italy",
+        "timezone": "Europe/Rome",
+        "offset": 2,
+        "emoji": "🇮🇹"
+    },
+    {
+        "city": "Florence",
+        "country": "Italy",
+        "timezone": "Europe/Rome",
+        "offset": 2,
+        "emoji": "🇮🇹"
+    },
+    {
+        "city": "Valencia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "offset": 2,
+        "emoji": "🇪🇸"
+    },
+    {
+        "city": "Seville",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "offset": 2,
+        "emoji": "🇪🇸"
+    },
+    {
+        "city": "Málaga",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "offset": 2,
+        "emoji": "🇪🇸"
+    },
+    {
+        "city": "Gothenburg",
+        "country": "Sweden",
+        "timezone": "Europe/Stockholm",
+        "offset": 2,
+        "emoji": "🇸🇪"
+    },
+    {
+        "city": "Malmö",
+        "country": "Sweden",
+        "timezone": "Europe/Stockholm",
+        "offset": 2,
+        "emoji": "🇸🇪"
+    },
+    {
+        "city": "Bergen",
+        "country": "Norway",
+        "timezone": "Europe/Oslo",
+        "offset": 2,
+        "emoji": "🇳🇴"
+    },
+    {
+        "city": "Trondheim",
+        "country": "Norway",
+        "timezone": "Europe/Oslo",
+        "offset": 2,
+        "emoji": "🇳🇴"
+    },
+    {
+        "city": "Riyadh",
+        "country": "Saudi Arabia",
+        "timezone": "Asia/Riyadh",
+        "offset": 3,
+        "emoji": "🇸🇦"
+    },
+    {
+        "city": "Jeddah",
+        "country": "Saudi Arabia",
+        "timezone": "Asia/Riyadh",
+        "offset": 3,
+        "emoji": "🇸🇦"
+    },
+    {
+        "city": "Medina",
+        "country": "Saudi Arabia",
+        "timezone": "Asia/Riyadh",
+        "offset": 3,
+        "emoji": "🇸🇦"
+    },
+    {
+        "city": "Kuwait City",
+        "country": "Kuwait",
+        "timezone": "Asia/Kuwait",
+        "offset": 3,
+        "emoji": "🇰🇼"
+    },
+    {
+        "city": "Doha",
+        "country": "Qatar",
+        "timezone": "Asia/Qatar",
+        "offset": 3,
+        "emoji": "🇶🇦"
+    },
+    {
+        "city": "Manama",
+        "country": "Bahrain",
+        "timezone": "Asia/Bahrain",
+        "offset": 3,
+        "emoji": "🇧🇭"
+    },
+    {
+        "city": "Muscat",
+        "country": "Oman",
+        "timezone": "Asia/Muscat",
+        "offset": 4,
+        "emoji": "🇴🇲"
+    },
+    {
+        "city": "Hyderabad",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "offset": 5.5,
+        "emoji": "🇮🇳"
+    },
+    {
+        "city": "Pune",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "offset": 5.5,
+        "emoji": "🇮🇳"
+    },
+    {
+        "city": "Ahmedabad",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "offset": 5.5,
+        "emoji": "🇮🇳"
+    },
+    {
+        "city": "Colombo",
+        "country": "Sri Lanka",
+        "timezone": "Asia/Colombo",
+        "offset": 5.5,
+        "emoji": "🇱🇰"
+    },
+    {
+        "city": "Chiang Mai",
+        "country": "Thailand",
+        "timezone": "Asia/Bangkok",
+        "offset": 7,
+        "emoji": "🇹🇭"
+    },
+    {
+        "city": "Phuket",
+        "country": "Thailand",
+        "timezone": "Asia/Bangkok",
+        "offset": 7,
+        "emoji": "🇹🇭"
+    },
+    {
+        "city": "Hanoi",
+        "country": "Vietnam",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "offset": 7,
+        "emoji": "🇻🇳"
+    },
+    {
+        "city": "Ho Chi Minh City",
+        "country": "Vietnam",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "offset": 7,
+        "emoji": "🇻🇳"
+    },
+    {
+        "city": "Da Nang",
+        "country": "Vietnam",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "offset": 7,
+        "emoji": "🇻🇳"
+    },
+    {
+        "city": "Shenzhen",
+        "country": "China",
+        "timezone": "Asia/Shanghai",
+        "offset": 8,
+        "emoji": "🇨🇳"
+    },
+    {
+        "city": "Chengdu",
+        "country": "China",
+        "timezone": "Asia/Shanghai",
+        "offset": 8,
+        "emoji": "🇨🇳"
+    },
+    {
+        "city": "Hangzhou",
+        "country": "China",
+        "timezone": "Asia/Shanghai",
+        "offset": 8,
+        "emoji": "🇨🇳"
+    },
+    {
+        "city": "Suzhou",
+        "country": "China",
+        "timezone": "Asia/Shanghai",
+        "offset": 8,
+        "emoji": "🇨🇳"
+    },
+    {
+        "city": "Nagoya",
+        "country": "Japan",
+        "timezone": "Asia/Tokyo",
+        "offset": 9,
+        "emoji": "🇯🇵"
+    },
+    {
+        "city": "Fukuoka",
+        "country": "Japan",
+        "timezone": "Asia/Tokyo",
+        "offset": 9,
+        "emoji": "🇯🇵"
+    },
+    {
+        "city": "Sapporo",
+        "country": "Japan",
+        "timezone": "Asia/Tokyo",
+        "offset": 9,
+        "emoji": "🇯🇵"
+    },
+    {
+        "city": "Hobart",
+        "country": "Australia",
+        "timezone": "Australia/Hobart",
+        "offset": 10,
+        "emoji": "🇦🇺"
+    },
+    {
+        "city": "Canberra",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "offset": 10,
+        "emoji": "🇦🇺"
+    },
+    {
+        "city": "Gold Coast",
+        "country": "Australia",
+        "timezone": "Australia/Brisbane",
+        "offset": 10,
+        "emoji": "🇦🇺"
+    },
+    {
+        "city": "Hamilton",
+        "country": "New Zealand",
+        "timezone": "Pacific/Auckland",
+        "offset": 12,
+        "emoji": "🇳🇿"
+    },
+    {
+        "city": "Dunedin",
+        "country": "New Zealand",
+        "timezone": "Pacific/Auckland",
+        "offset": 12,
+        "emoji": "🇳🇿"
+    }
 ]

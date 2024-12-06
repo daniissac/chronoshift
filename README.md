@@ -1,28 +1,27 @@
+# TeamTime: Track Colleague Times Globally
 
-# ChronoShift: Visual Timezone Converter
-
-ChronoShift is an elegant, user-friendly timezone conversion tool that features a digital time display. It allows users to easily convert times between different timezones with a clean, modern interface.
+TeamTime is a user-friendly web application designed to help teams track and manage time differences across global colleagues. With its intuitive interface, you can easily keep track of what time it is for your team members around the world.
 
 ## Features
 
-- ⏰ Clean digital clock display
+- 👥 Track multiple colleague times simultaneously
 - 🌍 Support for all major global timezones
-- 📍 Automatic local timezone detection
-- ⚡ Real-time conversion updates
-- 🎯 Custom time selection
-- 🔄 Quick timezone swap functionality
+- 🕒 Real-time time updates
+- 🎯 DST-aware time conversion
 - 📱 Responsive design for all devices
+- 💾 Local storage for persistent colleague list
+- 🔄 Automatic timezone updates
 
 ## Usage
 
-1. Select your source timezone (or use "Detect My Location")
-2. Choose the target timezone
-3. Use either current time or set a custom time
-4. View the converted time result instantly
+1. Enter your colleague's name
+2. Select their timezone
+3. Click "Add Colleague" to start tracking their time
+4. View all colleague times updating in real-time
 
 ## Live Demo
 
-Try ChronoShift now at: [ChronoShift Demo](https://daniissac.com/chronoshift)
+Try TeamTime now at: [ChronoShift Demo](https://daniissac.com/chronoshift)
 
 ## Contributing
 
